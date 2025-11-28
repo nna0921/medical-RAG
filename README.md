@@ -19,17 +19,24 @@ It embeds ~800 medical transcriptions, builds a vector index with batching & rat
 ## Features
 
 ✔️ Automated text-splitting and embedding
+
 ✔️ Batch-based FAISS index creation with progress bars
+
 ✔️ Full RAG chain (Retriever → Prompt → LLM)
+
 ✔️ Gradio chat interface with examples
+
 ✔️ Index saving + reload test script
+
 ✔️ Kaggle-ready, GPU-enabled notebook environment
 
 ## 1. Installation
 pip install -q langchain langchain-google-genai langchain-community faiss-cpu sentence-transformers gradio python-dotenv
 
 
+
 Kaggle will auto-install some packages.
+
 If dependency warnings appear, they do not break this project.
 
  ## 2. Setup API Key (Kaggle)
@@ -78,7 +85,7 @@ Radiology
 
 General Surgery
 
-Each sample includes:
+### Each sample includes:
 
 description – type of procedure / case
 
@@ -86,13 +93,13 @@ medical_specialty – specialty category
 
 transcription – detailed medical note
 
-Why This Dataset Works Well for RAG
+### Why This Dataset Works Well for RAG
 
 It contains long, detailed clinical narratives, ideal for chunk-based retrieval.
 
 Each transcription uniquely reflects:
 
-Symptoms
+### Symptoms
 
 Medical histories
 
@@ -104,7 +111,7 @@ Treatments
 
 It allows the model to answer evidence-based medical questions, unlike synthetic summaries.
 
-What the Dataset Does Not Contain
+### What the Dataset Does Not Contain
 
 No patient identifiers (HIPAA stripped)
 
@@ -112,7 +119,7 @@ No structured diagnosis labels
 
 No images, labs, reports — only text
 
-This makes it perfect for:
+### This makes it perfect for:
 
 Medical education projects
 
